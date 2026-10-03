@@ -115,7 +115,7 @@
         
            <!-- AD SLOT 2 — RECTANGLE BANNER (300x250) PLACED DIRECTLY BELOW VIDEO PLAYER -->
         <div class="max-w-[330px] mx-auto my-8 px-4 text-center">
-            <div class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest mb-1">ADVERTISEMENT</div>
+            <div class="text-[10px] font-semibold text-slate-500 uppercase tracking-widest mb-1"> </div>
             <div class="bg-slate-900 border border-slate-800 rounded-xl p-2 flex items-center justify-center min-h-[250px] shadow-lg overflow-hidden">
                 <!-- Ad Slot 300x250 Network Script Insertion -->
                 <script>
@@ -367,17 +367,22 @@ hs.src = ('//s10.histats.com/js15_as.js');
 <!-- Histats.com  END  -->
     </footer>
 
-    <!-- AD SLOT 1 — STICKY BANNER (728x90) FIXED BOTTOM -->
-    <div id="sticky-ad-banner" class="fixed bottom-0 inset-x-0 z-50 bg-slate-950/95 border-t border-slate-800/80 backdrop-blur-md p-2 flex items-center justify-center transition-all">
-        <div class="relative w-full max-w-[728px] flex items-center justify-center">
-            <!-- Close Button for Sticky Banner -->
-            <button onclick="closeStickyAd()" type="button" class="absolute -top-3 right-1 w-5 h-5 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white rounded-full flex items-center justify-center text-xs shadow-md" aria-label="Close Ad">
-                &times;
-            </button>
-            <div class="text-center w-full">
-                <div class="text-[9px] font-semibold text-slate-500 uppercase tracking-widest mb-0.5">ADVERTISEMENT (728x90)</div>
-                <!-- Ad Slot 728x90 Network Script Insertion -->
-                <script>
+  <!-- AD SLOT 1 — STICKY BANNER (Responsive) -->
+<div id="sticky-ad-banner" class="fixed bottom-0 inset-x-0 z-50 bg-slate-950/95 border-t border-slate-800/80 backdrop-blur-md p-2 flex items-center justify-center transition-all">
+    <div class="relative w-full max-w-[728px] flex items-center justify-center">
+        <!-- Close Button -->
+        <button onclick="closeStickyAd()" type="button" class="absolute -top-3 right-1 w-5 h-5 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white rounded-full flex items-center justify-center text-xs shadow-md z-10" aria-label="Close Ad">
+            &times;
+        </button>
+        
+        <!-- Wrapper untuk menyesuaikan ukuran di mobile -->
+        <div class="text-center w-full overflow-hidden">
+            <div class="text-[9px] font-semibold text-slate-500 uppercase tracking-widest mb-0.5"> </div>
+            
+            <!-- Kontainer dengan lebar tetap 728px yang diskalakan otomatis di HP -->
+            <div class="flex justify-center items-center w-full h-[90px] overflow-hidden">
+                <div style="width: 728px; height: 90px;" class="origin-center scale-[0.45] sm:scale-75 md:scale-100 transition-transform">
+                    <script>
                   atOptions = {
                     'key' : '2d751854ce36e13fefddaa58f93251e2',
                     'format' : 'iframe',
@@ -387,9 +392,12 @@ hs.src = ('//s10.histats.com/js15_as.js');
                   };
                 </script>
                 <script src="https://buffcasualwhine.com/2d751854ce36e13fefddaa58f93251e2/invoke.js"></script>
+     
+                </div>
             </div>
         </div>
     </div>
+</div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
